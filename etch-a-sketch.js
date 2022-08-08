@@ -36,9 +36,14 @@ function resetSize (){
 }
 
 
-// create default canvas size of 30 * 30 and add button click event listener on DOM load
+// create default canvas size of 16*16 and add button click event listener on DOM load
 document.addEventListener('DOMContentLoaded', () => {
     let resetButton = document.querySelector('.reset-button');
     createCanvas(16);
     resetButton.addEventListener('click', resetSize);
-})
+    window.addEventListener('keypress', function (e) {
+        if (e.key === 'Enter') {
+            resetSize();
+        }
+    })
+});
