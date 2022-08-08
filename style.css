@@ -1,5 +1,4 @@
 * {
-    border: dotted 1px red;
     font-family: sans-serif;
     margin: 0;
     padding: 0;
@@ -20,21 +19,59 @@ body {
 .grid-container {
     display: flex;
     flex-direction: row;
+    position: absolute;
+    top: 10%;
+    width: 960px;
+    height: 960px;
 }
 
 .grid-square {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    height: 20px;
-    width: 20px;
+    outline: solid 1px rgba(255, 255, 255, 0.2);
 }
 
 .colored-cell {
     background-color: red;
 }
 
+.reset-button {
+    margin-top: 5px;
+    height: auto;
+    width: 100px;
+}
+
 .reset-button:active {
     transform: scale(1.1);
     transition-duration: 100ms;
+}
+
+.header-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 5%;
+}
+
+.subheading {
+    font-size: 14px;
+}
+
+input {
+    text-align: center;
+    width: 30px;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    position: absolute;
+    bottom: 1%;
 }
