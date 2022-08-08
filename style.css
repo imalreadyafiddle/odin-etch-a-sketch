@@ -1,5 +1,40 @@
-html {
+* {
+    border: dotted 1px red;
     font-family: sans-serif;
     margin: 0;
     padding: 0;
+}
+
+html {
+    background-color: black;
+    color: white;
+}
+
+body {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.grid-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.grid-square {
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 20px;
+    width: 20px;
+}
+
+.colored-cell {
+    background-color: red;
+}
+
+.reset-button:active {
+    transform: scale(1.1);
+    transition-duration: 100ms;
 }
